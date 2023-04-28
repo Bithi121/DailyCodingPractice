@@ -1,0 +1,480 @@
+
+Fahrenheit :
+
+public class Program
+{
+	public static void Main()
+	{
+		double fahrenheit, celsius;
+
+		Console.WriteLine("Enter the Fahrenheit value : ");
+		fahrenheit = Convert.ToInt32(Console.ReadLine());
+
+		celsius = (fahrenheit - 32) * (5/9);
+
+		Console.WriteLine("Celsius : "+celsius);
+	}
+}
+
+
+Similarity between two characters:
+
+public class Program
+{
+	public static void Main()
+	{
+		char c1,c2;
+		
+		Console.WriteLine("Enter the first character : ");
+		c1 = Console.ReadLine()[0];
+		
+        Console.WriteLine("Enter the second character : ");
+        c2 = Console.ReadLine()[0];
+
+        if(c1 == c2)
+			Console.WriteLine("Both characters are equal");
+		else
+			Console.WriteLine("Characters are not equal");
+	}
+}
+
+
+Fibonaaci series:
+  
+  public class Fibonacci 
+   {  
+     public static void Main(string[] args)  
+      {  
+         int n1=0,n2=1,n3,i,number;    
+         Console.Write("Enter the number of elements: ");    
+         number = int.Parse(Console.ReadLine());  
+         Console.Write(n1+" "+n2+" ");    
+         for(i=2;i<number;++i)   
+         {    
+          n3=n1+n2;    
+          Console.Write(n3+" ");    
+          n1=n2;    
+          n2=n3;    
+         }    
+      }  
+   }  
+
+
+Prime number:
+
+
+					
+public class Program
+{
+	private static bool isPrime(int num){
+
+		for(int i = 2; i<= num/2; i++){
+			if(num % i == 0){
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	public static void Main()
+	{
+		int num;
+		Console.WriteLine("Enter the number to check : ");
+		num = int.Parse(Console.ReadLine());
+		
+		if(isPrime(num)){
+			Console.WriteLine("{0} is a prime number",num);
+		} else {
+			Console.WriteLine("{0} is not a prime number",num);
+		}
+	}
+}
+
+
+Sum of all even numbers:
+
+
+public class Program {
+
+	public static void Main(string[] args) {
+		int i, limit, sum = 0;
+		Console.WriteLine("Enter the limit :");
+		
+		limit = Convert.ToInt32(Console.ReadLine());
+		
+		for(i = 1; i<= limit; i++){
+			if(i % 2 == 0){
+				sum += i;
+			}
+		}
+		
+		Console.WriteLine("Total sum: "+sum);
+	}
+}
+
+even sum and odd sum:
+
+public class Program {
+  public static void Main() {
+      int size;
+      int oddSum = 0, evenSum = 0;
+      int oddCount = 0, evenCount = 0;
+      
+      Console.WriteLine("Enter the size of the array:");
+      size = Convert.ToInt32(Console.ReadLine());
+      
+      int[] arr = new int[size];
+      
+      Console.WriteLine("Enter the array values:");
+      for(int i = 0; i< size; i++){
+        arr[i] = Convert.ToInt32(Console.ReadLine());
+      }
+      
+      for(int i = 0; i< size; i++){
+        if(arr[i] % 2 == 0){
+            evenSum += arr[i];
+            evenCount++;
+        }else{
+            oddSum += arr[i];
+            oddCount++;
+        }
+      }
+      
+      Console.WriteLine("Even average: "+evenSum/evenCount+" Odd average: "+oddSum/oddCount);
+  }
+}
+
+
+Switch case:
+
+
+public class Program
+{
+	public static void Main()
+	{
+		int day;
+        
+        Console.WriteLine("Enter the week day number : ");
+		day = Convert.ToInt32(Console.ReadLine());
+		
+		switch(day){
+			case 1:
+				Console.WriteLine("Monday");
+				break;
+			case 2:
+				Console.WriteLine("Tuesday");
+				break;
+			case 3:
+				Console.WriteLine("Wednesday");
+				break;
+			case 4:
+				Console.WriteLine("Thursday");
+				break;
+			case 5:
+				Console.WriteLine("Friday");
+				break;
+			case 6:
+				Console.WriteLine("Saturday");
+				break;
+			case 7:
+				Console.WriteLine("Sunday");
+				break;
+			default:
+				Console.WriteLine("Invalid input");
+				break;
+		}
+	}
+}
+
+Vowels count in given string:
+
+public class Program
+    {
+        public static void Main(string[] args)
+        {
+            String givenString = "Hello WOrld !!";
+            String vowels = "aeiouAEIOU";
+            int total = 0;
+
+            for (int i = 0; i < givenString.Length; i++)
+            {
+                if (vowels.Contains(givenString[i]+""))
+                {
+                    total++;
+                }
+            }
+
+            Console.WriteLine("Total vowels: " + total);
+        }
+    }
+}
+
+Largest number:
+
+
+public class Program
+{
+	public static void Main()
+	{
+		int first,second;
+        
+        Console.WriteLine("Enter the first number : ");
+		first = Convert.ToInt32(Console.ReadLine());
+		
+		Console.WriteLine("Enter the second number : ");
+		second = Convert.ToInt32(Console.ReadLine());
+		
+		if(first > second){
+			Console.WriteLine("First number is greater than the second number");
+		}else{
+			Console.WriteLine("First number is smaller than the second number");
+		}
+	}
+
+String modified:
+
+public class Program
+{
+	public static void Main()
+	{
+		string str;
+        
+        Console.Write("Enter a string : ");
+        str = Console.ReadLine();
+        
+        String modifiedString = str.Replace(',','\n');
+		Console.WriteLine("New string : ");
+		Console.Write(modifiedString);
+	}
+}
+
+Sum of all digits:
+
+
+public class Program {
+	static int findSum(int no) {
+		int remainder;
+		int sum = 0;
+
+		while (no > 0) {
+			remainder = no % 10;
+			sum = sum + remainder;
+			no = no / 10;
+		}
+
+		return sum;
+	}
+
+	public static void Main(string[] args) {
+		int number;
+
+		Console.WriteLine("Enter a number: ");
+		number = int.Parse(Console.ReadLine());
+
+		Console.Write("Sum of the digits " + findSum(number));
+	}
+}
+
+
+Reverse Number:
+
+ public class Reverse
+   {  
+     public static void Main(string[] args)  
+      {  
+       int  n, reverse=0, rem;           
+       Console.Write("Enter a number: ");      
+       n= int.Parse(Console.ReadLine());     
+       while(n!=0)      
+       {      
+        rem=n%10;        
+        reverse=reverse*10+rem;      
+        n/=10;      
+       }      
+       Console.Write("Reversed Number: "+reverse);       
+    }  
+  }  
+
+Factorial Number:
+
+public class FactorialExample  
+   {  
+     public static void Main(string[] args)  
+      {  
+       int i,fact=1,number;      
+       Console.Write("Enter any Number: ");      
+       number= int.Parse(Console.ReadLine());     
+       for(i=1;i<=number;i++){      
+        fact=fact*i;      
+       }      
+       Console.Write("Factorial of " +number+" is: "+fact);    
+     }  
+  }  
+
+Reverse string:
+
+class Reverse{
+     
+public static string Reversestr(string Input) 
+{ 
+     
+    char[] charArray = Input.ToCharArray(); 
+     
+    string reversedString = null; 
+     
+
+    for(int i = charArray.Length - 1; i >= 0; i--) 
+    { 
+         
+        reversedString += charArray[i]; 
+    }
+     
+    return reversedString;
+} 
+ 
+static void Main(string[] args) 
+{ 
+    Console.WriteLine(Reversestr("bithi")); 
+} 
+}
+
+Power(x,n):
+
+
+
+class Power{
+ 
+    public static int power(int x, int n)
+    {
+ int result=1;
+      
+        if (n == 0)
+            return 1;
+ 
+
+        if (x == 0)
+            return 0;
+ 
+       for ( int i = 1; i <= n; i ++)
+
+                  result = result * x;
+                  return result;
+    }
+ 
+    public static void Main(String[] args)
+    {
+        int x = 2;
+        int n = 3;
+ 
+        // Function call
+        Console.WriteLine(power(x, n));
+    }
+}
+
+
+Palindrome:
+
+ public class Palindrome 
+   {  
+     public static void Main(string[] args)  
+      {  
+          int n,r,sum=0,temp;    
+          Console.Write("Enter the Number: ");   
+          n = int.Parse(Console.ReadLine());  
+          temp=n;      
+          while(n>0)      
+          {      
+           r=n%10;      
+           sum=(sum*10)+r;      
+           n=n/10;      
+          }      
+          if(temp==sum)      
+           Console.Write("True.");      
+          else      
+           Console.Write("False");     
+    }  
+  }  
+
+
+Virtual function:
+
+public class Base
+{
+public virtual void Test()
+{
+Console.WriteLine("This is the base version of the virtual method");
+}
+}
+public class Derived : Base
+{
+public override void Test()
+{
+Console.WriteLine("This is the derived version of the virtual method");
+}
+}
+class Program
+{
+static void Main()
+{
+Base baseObj1 = new Base();
+baseObj1.Test();
+Base baseObj2 = new Derived();
+baseObj2.Test();
+}
+}
+
+Sealed class:
+
+sealed class SealedClass {
+ 
+  
+    public int Add(int a, int b)
+    {
+        return a + b;
+    }
+}
+ 
+class Program {
+ 
+
+    static void Main(string[] args)
+    {
+ 
+
+        SealedClass slc = new SealedClass();
+ 
+
+         Console.WriteLine(slc.Add(6, 4));
+     
+    }
+}
+
+
+even and odd sum:
+
+class EvenOdd {
+  static void Main() {
+     
+      int oddSum = 0, evenSum = 0;
+      
+      Console.WriteLine("Enter the size of the array:");
+     int  n = Convert.ToInt32(Console.ReadLine());
+      
+      int[] arr = new int[n];
+      
+      Console.WriteLine("Enter the array values:");
+      for(int i = 0; i< n; i++){
+        arr[i] = Convert.ToInt32(Console.ReadLine());
+      }
+      
+      for(int i = 0; i< n; i++){
+        if(arr[i] % 2 == 0){
+            evenSum += arr[i];
+        }else{
+            oddSum += arr[i];
+        }
+      }
+      
+      Console.WriteLine("Even Sum: "+evenSum+" Odd Sum: "+oddSum);
+  }
+}
