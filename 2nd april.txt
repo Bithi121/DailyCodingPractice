@@ -1,0 +1,168 @@
+1.using System;
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Enter the first string");
+        string a=Console.ReadLine();
+         Console.WriteLine("Enter the second string");
+        string b=Console.ReadLine();
+           string reversedString = null; 
+     for(int i = b.Length - 1; i >= 0; i--) 
+    { 
+         
+        reversedString += b[i]; 
+    }
+      if(a.Equals(reversedString))
+      {
+          Console.WriteLine("Both are reversed");
+      }
+      else
+      {
+                Console.WriteLine("Both are not reversed");
+      }
+        
+    }
+}
+
+
+2.
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+ class HelloWorld
+{
+    static int smallestSumSubarr(int[] arr, int n)
+    {
+        // to store the minimum value that is
+        // ending up to the current index
+        int min_ending_here = 2147483647;
+ 
+        // to store the minimum value encountered
+        // so far
+        int min_so_far = 2147483647;
+ 
+        // traverse the array elements
+        for (int i = 0; i < n; i++) {
+ 
+            // if min_ending_here > 0, then it could
+            // not possibly contribute to the
+            // minimum sum further
+            if (min_ending_here > 0)
+                min_ending_here = arr[i];
+ 
+            // else add the value arr[i] to
+            // min_ending_here
+            else
+                min_ending_here += arr[i];
+ 
+            // update min_so_far
+            min_so_far = Math.Min(min_so_far,
+                                min_ending_here);
+        }
+ 
+        // required smallest sum contiguous
+        // subarray value
+        return min_so_far;
+    }
+
+ 
+    // Driver method
+    public static void Main()
+    {
+ 
+        int[] arr = { 3, -4, 2, -3, -1, 7, -5 };
+        int n = arr.Length;
+ 
+        Console.Write("Smallest sum: " +
+             smallestSumSubarr(arr, n));
+    }
+
+}
+
+3.class Power{
+ 
+    public static int power(int x, int n)
+    {
+ int result=1;
+      
+        if (n == 0)
+            return 1;
+ 
+
+        if (x == 0)
+            return 0;
+ 
+       for ( int i = 1; i <= n; i ++)
+
+                  result = result * x;
+                  return result;
+    }
+ 
+    public static void Main(String[] args)
+    {
+        int x = 2;
+        int n = 3;
+ 
+        Console.WriteLine(power(x, n));
+    }
+}
+
+4.class Reverse{
+     
+public static string Reversestr(string Input) 
+{ 
+     
+    char[] charArray = Input.ToCharArray(); 
+     
+    string reversedString = null; 
+     
+
+    for(int i = charArray.Length - 1; i >= 0; i--) 
+    { 
+         
+        reversedString += charArray[i]; 
+    }
+     
+    return reversedString;
+} 
+ 
+static void Main(string[] args) 
+{ 
+    Console.WriteLine(Reversestr("bithi")); 
+} 
+}
+
+Or:
+
+using System;
+
+
+namespace HelloWorld
+{
+	public class Program
+	{
+		public static void Main(string[] args)
+		{
+			// reverse string using recursion 
+			
+			string s = "Hello World!";
+			
+			string output = Reverse(s);
+			Console.WriteLine(output);
+			
+		}
+		
+		public static string Reverse(string s){
+		 
+		 if(s.Length == 0) {
+		   return "";
+		 }
+		 
+		 return s[s.Length-1] + Reverse(s.Substring(0, s.Length-1));
+		  
+		}
+	}
+}
+
