@@ -1,0 +1,79 @@
+10.using System;
+
+public class Program
+{
+	public static void Main()
+	{
+		int i = 10, j = 10;
+		Console.WriteLine(i == j); // true(checks whether two operands are equal or not)
+		Console.WriteLine(i.Equals(j)); // true(checks whether the two object instances are equal or not.)
+	}
+}
+
+12.
+using System;
+public class GFG{
+
+static void permute(String s,
+					String answer)
+{
+	if (s.Length == 0)
+	{
+		Console.Write(answer + " ");
+		return;
+	}
+	
+	for(int i = 0 ;i < s.Length; i++)
+	{
+		char ch = s[i];
+		String left_substr = s.Substring(0, i);
+		String right_substr = s.Substring(i + 1);
+		String rest = left_substr + right_substr;
+		permute(rest, answer + ch);
+	}
+}
+
+// Driver code
+public static void Main(String []args)
+{	
+	String s;
+	String answer="";
+	
+	Console.Write(
+	"Enter the string : ");
+	s = Console.ReadLine();
+	
+	Console.Write(
+	"\nAll possible strings are : ");
+	permute(s, answer);
+}
+}
+13.using System;
+class Program {  
+    public class Anagram {  
+        public bool areAnagram(string firstString, string secondString) {  
+            if (firstString.Length != secondString.Length) {  
+                return false;  
+            }  
+           
+        else
+            return true;  
+        }  
+    }  
+    static void Main(string[] args) {  
+        string firstString, secondString;  
+        //Gets words from user.  
+        Console.WriteLine("Enter first string");  
+        firstString = Console.ReadLine();  
+        Console.WriteLine("Enter second string");  
+        secondString = Console.ReadLine();  
+        Anagram anagram = new Anagram();  
+        //Check if words are anagram  
+        if (anagram.areAnagram(firstString, secondString) == true) {  
+            Console.WriteLine("Both string are anagram string.");  
+        } else {  
+            Console.WriteLine("Both string are not anagram string.");  
+        }  
+        Console.ReadLine();  
+    }  
+} 
