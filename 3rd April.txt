@@ -1,0 +1,73 @@
+6.using System;  
+                      
+public class RepeatativeCharacters  
+{  
+    public static void Main()  
+    {  
+        String str = "Great responsibility";  
+        int count;  
+          
+        //Converts given string into character array  
+        char[] string1 = str.ToCharArray();  
+          
+        Console.WriteLine("Repeatative characters in a given string: ");  
+        //Counts each character present in the string  
+        for(int i = 0; i <string1.Length; i++) {  
+            count = 1;  
+            for(int j = i+1; j <string1.Length; j++) {  
+                if(string1[i] == string1[j] && string1[i] != ' ') {  
+                    count++;  
+                    //Set string1[j] to 0 to avoid printing visited character  
+                    string1[j] = '0';  
+                }  
+            }  
+            //A character is considered as duplicate if count is greater than 1  
+            if(count > 1 && string1[i] != '0')  
+                Console.WriteLine(string1[i]);  
+        }  
+    }  
+} 
+
+7.using System;
+public class Program
+    {
+        public static void Main(string[] args)
+        {
+            String givenString = "Hello WOrld !!";
+            String vowels = "aeiouAEIOU";
+            int total = 0;
+            int t=0;
+
+            for (int i = 0; i < givenString.Length; i++)
+            {
+                if (vowels.Contains(givenString[i]+""))
+                {
+                    total++;
+                }
+                 else if((givenString[i]>='a' && givenString[i]<='z') || (givenString[i]>='A' && givenString[i]<='Z'))
+        {
+            t++;
+        }
+            }
+
+            Console.WriteLine("Total vowels: " + total);
+            Console.WriteLine("Total consonants: " + t);
+        
+        
+        
+    }
+}
+ 
+
+8.using System;
+public class Program
+    {
+        public static void Main(string[] args)
+        {
+            String givenString = "11234";
+           int i=Convert.ToInt32(givenString);
+           Console.WriteLine(i);
+        
+        
+    }
+}
