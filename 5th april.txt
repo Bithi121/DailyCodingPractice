@@ -1,0 +1,153 @@
+14.using System;  
+public class Exercise11  
+{  
+    public static void Main() 
+{
+  string str;
+  char[] arr1;
+  char ch;
+  int i,j,l;
+ 
+      Console.Write("Input the string : ");
+      str = Console.ReadLine();	
+      l=str.Length;
+      arr1 = str.ToCharArray();
+
+   for(i=1;i<l;i++)
+    for(j=0;j<l-i;j++)
+	
+	if(arr1[j]>arr1[j+1])
+	{
+	  ch=arr1[j];
+	  arr1[j] = arr1[j+1];
+	  arr1[j+1]=ch;
+	}
+   Console.Write("After sorting the string appears like : \n");
+    foreach (char c in arr1)
+       { 
+        ch=c;
+         Console.Write("{0} ",ch);
+       }
+       Console.WriteLine("\n");
+   }
+}
+
+16.using System;  
+public class Exercise4  
+{  
+    public static void Main() 
+{       
+    int i,n,sum=0;
+	double avg;
+
+    Console.Write("Read 10 numbers and calculate sum and average:\n");
+
+	
+	Console.Write("Input the 10 numbers : \n");
+	for (i=1;i<=10;i++)
+	{
+                Console.Write("Number-{0} :",i);
+
+        n= Convert.ToInt32(Console.ReadLine());		
+		sum +=n;
+	}
+	avg=sum/10.0;
+	Console.Write("The sum of 10 no is : {0}\nThe Average is : {1}\n",sum,avg);
+   }
+}
+
+17.public class Program {
+  public static void Main() {
+      int size;
+      int oddSum = 0, evenSum = 0;
+  
+      
+      Console.WriteLine("Enter the size of the array:");
+      size = Convert.ToInt32(Console.ReadLine());
+      
+      int[] arr = new int[size];
+      
+      Console.WriteLine("Enter the array values:");
+      for(int i = 0; i< size; i++){
+        arr[i] = Convert.ToInt32(Console.ReadLine());
+      }
+      
+      for(int i = 0; i< size; i++){
+        if(arr[i] % 2 == 0){
+            evenSum += arr[i];
+       
+        }else{
+            oddSum += arr[i];
+          
+        }
+      }
+      
+      Console.WriteLine("Even average: "+evenSum+" Odd average: "+oddSum);
+  }
+}
+18.
+using System;
+		
+public class GFG {
+	
+
+	public static int count(string s, char c)
+	{
+		int res = 0;
+
+		for (int i = 0; i < s.Length; i++)
+		{
+			if (s[i] == c)
+			res++;
+		}
+		
+		return res;
+	}
+	
+	// Driver method
+	public static void Main()
+	{
+		string str = "bithi";
+		char c = 'a';
+		
+		Console.WriteLine(count(str, c));
+	}
+}
+
+19.import java.util.Scanner;
+public class LeapYear {
+   public static void main(String[] args){
+      int year;
+      System.out.println("Enter an Year :");
+      Scanner sc = new Scanner(System.in);
+      year = sc.nextInt();
+
+      if (((year % 4 == 0) && (year % 100== 0)) || (year%400 == 0))
+         System.out.println("This year is a leap year");
+      else
+         System.out.println("This  year is not a leap year");
+   }
+}
+
+20.public class FindLargestSmallestNumber {
+
+ public static void main(String[] args) {
+
+
+  int numbers[] = new int[]{10,20,30,40,50};
+
+  int smallest = numbers[0];
+  int largetst = numbers[0];
+
+  for (int i = 1; i < numbers.length; i++) {
+   if (numbers[i] > largetst)
+    largetst = numbers[i];
+   else if (numbers[i] < smallest)
+    smallest = numbers[i];
+  }
+
+  System.out.println("Largest Number is : " + largetst);
+  System.out.println("Smallest Number is : " + smallest);
+ }
+}
+
